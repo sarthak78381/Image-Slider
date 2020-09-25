@@ -17,6 +17,13 @@ body {
     bottom: 0;
     right: 0;
 }
+
+/* Navbar */
+.navbar{
+    height: 5vw;
+}
+
+/* Image Slider */
 #image_container{
     display: flex;
     justify-content: space-between;
@@ -59,7 +66,7 @@ img{
 i{
     font-size: 1vw;
 }
-
+/* Intro Box Container and its Elements */
 .intro-container{
     position: relative;
     height: 50vw;
@@ -101,6 +108,13 @@ i{
     color: rgb(255, 255, 255);
 }
 
+/* Intro Box Animations */
+.intro-box-animation{
+    transition: all .4s ease-out;
+    opacity: 1;
+    transform: scale(1);
+}
+
 .intro-box-rm{
     opacity: 0;
     transform: scale(0);
@@ -138,11 +152,6 @@ i{
     opacity: 0;
 }
 
-.intro-box-animation{
-    transition: all .4s ease-out;
-    opacity: 1;
-    transform: scale(1);
-}
 
 .off{
     transition: all 1.2s .4s ease-out;
@@ -158,17 +167,17 @@ i{
 
 @media only screen and (max-width: 800px){
     .intro{
-        top: -38%;
-        width: 30%;
-        left: 15%;
+        top: -45%;
+        width: 50%;
+        left: 13%;
     }
     
     .intro .introHead{
-        font-size: 1vw;
+        font-size: 2vw;
         color: #fff;
     }
     .intro .introPara{
-        font-size: .8vw;
+        font-size: 1.5vw;
         color: rgb(255, 255, 255);
     }
 }
