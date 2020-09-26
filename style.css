@@ -20,7 +20,216 @@ body {
 
 /* Navbar */
 .navbar{
-    height: 5vw;
+    position: relative;
+    left: .3%;
+    height: 10vw;
+    width: 92.5vw;
+    border-radius: 10px;
+    margin: 1vw auto 1vw auto;
+    box-shadow: -2px 2px 6px 2.5px rgb(196, 192, 192);
+    /* background-color: red; */
+}
+
+.uppercontainer{
+    display: flex;
+    height: 6vw;
+    width: 100%;
+    align-items: center;
+}
+
+.lowercontainer{
+    /* border: 1px solid red; */
+    height: 4vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.lowercontainer > div{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 90vw;
+    margin: auto;
+    /* border: 1px solid green; */
+}
+
+.optionboxes{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* border: 1px solid #333; */
+}
+
+.optionboxes:first-child{
+    flex-grow: 3;
+}
+.optionboxes:nth-child(2){
+    flex-grow: .2;
+}
+
+.boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid yellow;     */
+    height: 100%;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.boxes h4{
+    text-transform: uppercase;
+    font-size: .8vw;
+}
+
+.optionboxes:nth-child(2) .boxes h4{
+    font-size: 2vw;
+    transform: translateY(-.5vw);
+}
+
+.optionboxes:last-child input{
+    font-size: 1.2vw;
+    border: none;
+    outline: none;
+    height: 90%;
+    margin: auto;
+}
+
+.optionboxes:last-child i{
+    padding: 1vw;
+    font-size: 1.5vw;
+    color: #676767;
+    margin-left: auto;
+}
+
+.brand, .account{
+    position: relative;
+    width: 50%;
+    height: 70%;
+    /* border: 1px solid #333; */
+}
+
+.brand > div{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.brand > div > .brandbox{
+    height: 100%;
+    /* background-color: grey; */
+}
+
+.brandbox:first-child{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.brandbox:last-child{
+    /* border: 1px solid green; */
+    width: 85%;
+}
+
+.hamcontainer{
+    cursor: pointer;
+    height: 2vw;
+    width: 2vw;
+    /* border: 1px solid red; */
+}
+.hamburger{
+    position: relative;
+    top: 1vw;
+    background-color: #000;
+    height: .1vw;
+    width: 2vw;
+}
+
+.hamburger::before, .hamburger::after{
+    content: '';
+    position: absolute;
+    top: -.4vw;
+    height: inherit;
+    width: inherit;
+    background-color: inherit;
+}
+
+.hamburger::after{
+    top: .4vw;
+}
+
+.brandbox .brandnamecontainer{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+
+.brandnamecontainer h1{
+    cursor: pointer;
+    color: #333;
+    font-size: 2vw;
+    letter-spacing: 4px;
+    font-weight: bolder;
+}
+
+
+.account > div{
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 95%;
+    margin: auto;
+}
+
+.account > div > div {
+    height: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountbox:first-child{
+    margin-left: auto;
+}
+
+.accountbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vw;
+    width: 10vw;
+    margin: 1vw;
+    cursor: pointer;
+}
+
+.accountbox:last-child{
+    border: 2px solid #3333;
+    border-radius: 3.5vw;
+}
+
+.accountbox i{
+    color: #23be8b;
+    margin: 0 .9vw;
+    font-size: 2vw;
+    transition: all .2s ease-out;
+}
+
+.accountbox i:hover{
+    filter: brightness(110%);
+}
+
+.accountbox h4{
+    transition: all .2s ease-out;
+    font-size: 1vw;
+    color: rgb(105, 101, 101);
+}
+
+.accountbox h4:hover{
+    color: #333;
 }
 
 /* Image Slider */
@@ -31,7 +240,6 @@ body {
     position: relative;
     height: 35vw;
     width: 100vw;
-    top: 5vw;
     left: 3.5vw;
     width: 92.45vw;
 }
@@ -76,7 +284,7 @@ i{
 .intro{
     transition: all .4s ease-out;
     position: absolute;
-    top: -45%;
+    top: -50%;
     width: 50%;
     left: 10%;
     z-index: 3;
@@ -93,7 +301,7 @@ i{
     outline: none;
     border: aquamarine;
     border-radius: 2vw;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: rajdhani, Helvetica, sans-serif;
     font-size: 1.2vw;
     margin: 1.5vw 0 1.5vw 0;
     padding: .8vw 1.6vw;
@@ -166,8 +374,11 @@ i{
 
 
 @media only screen and (max-width: 800px){
+    .navbar{
+        margin: 2.5vw auto;
+    }
     .intro{
-        top: -45%;
+        top: -55%;
         width: 50%;
         left: 13%;
     }
